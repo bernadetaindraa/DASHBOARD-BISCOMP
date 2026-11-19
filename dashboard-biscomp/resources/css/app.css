@@ -1,0 +1,256 @@
+@import 'tailwindcss';
+
+/* ==========================================
+   BUSINESS COMPLIANCE DASHBOARD
+   THEME CONFIGURATION
+========================================== */
+
+:root {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* Brand Colors */
+    --brand-blue: #0052B4;
+    --brand-navy: #2B3266;
+    --brand-teal: #1BC59B;
+
+    /* Neutral Colors */
+    --border-color: #E2E8F0;
+    --text-primary: #1E293B;
+    --text-secondary: #64748B;
+    --background-light: #F8FAFC;
+    --background-white: #FFFFFF;
+}
+
+
+/* ==========================================
+   DASHBOARD NAVIGATION CONTAINER
+========================================== */
+
+.dashboard-navigation {
+    background: var(--background-white);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+}
+
+#dashboardTabs {
+    border: none;
+    margin: 0;
+}
+
+#dashboardTabs .nav-item {
+    margin: 0;
+}
+
+#dashboardTabs .nav-link {
+    color: var(--text-secondary);
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 7px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 10px 20px;
+
+    transition: all 0.2s ease;
+}
+
+#dashboardTabs .nav-link:hover {
+    color: var(--brand-blue);
+    background: #F1F5F9;
+    border-color: var(--border-color);
+}
+
+#dashboardTabs .nav-link.active {
+    color: var(--brand-blue);
+    background: #EFF6FF;
+    border: 1px solid #BFDBFE;
+}
+
+#dashboardTabs .nav-link:focus-visible {
+    outline: 2px solid var(--brand-blue);
+    outline-offset: 2px;
+}
+
+
+/* ==========================================
+   DASHBOARD TAB CONTENT
+========================================== */
+
+.dashboard-content {
+    background: var(--background-white);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.03);
+}
+
+
+/* ==========================================
+   DASHBOARD GENERAL CARD
+========================================== */
+
+.content-card {
+    background: var(--background-white);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+
+/* ==========================================
+   DASHBOARD TABLE
+========================================== */
+
+.dashboard-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.dashboard-table thead th {
+    background: var(--background-light);
+    color: var(--text-secondary);
+
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+
+    padding: 13px 14px;
+    white-space: nowrap;
+}
+
+.dashboard-table tbody td {
+    color: var(--text-primary);
+    font-size: 13px;
+
+    padding: 13px 14px;
+
+    border-bottom: 1px solid #F1F5F9;
+    vertical-align: middle;
+}
+
+.dashboard-table tbody tr:hover {
+    background: #F8FAFC;
+}
+
+.dashboard-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* ==========================================
+   DASHBOARD BADGES
+========================================== */
+
+.dashboard-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px 10px;
+    border-radius: 6px;
+
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.dashboard-badge-primary {
+    color: #1D4ED8;
+    background: #EFF6FF;
+    border: 1px solid #BFDBFE;
+}
+
+.dashboard-badge-success {
+    color: #047857;
+    background: #ECFDF5;
+    border: 1px solid #A7F3D0;
+}
+
+.dashboard-badge-warning {
+    color: #B45309;
+    background: #FFFBEB;
+    border: 1px solid #FDE68A;
+}
+
+.dashboard-badge-danger {
+    color: #B91C1C;
+    background: #FEF2F2;
+    border: 1px solid #FECACA;
+}
+
+
+/* ==========================================
+   DASHBOARD FORM ELEMENTS
+========================================== */
+
+.dashboard-content .form-control,
+.dashboard-content .form-select {
+    border: 1px solid var(--border-color);
+    border-radius: 7px;
+    font-size: 13px;
+    color: var(--text-primary);
+}
+
+.dashboard-content .form-control:focus,
+.dashboard-content .form-select:focus {
+    border-color: #93C5FD;
+    box-shadow: 0 0 0 3px rgba(0, 82, 180, 0.08);
+}
+
+
+/* ==========================================
+   DASHBOARD BUTTON
+========================================== */
+
+.btn-dashboard-primary {
+    color: #FFFFFF;
+    background: var(--brand-blue);
+    border: 1px solid var(--brand-blue);
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 14px;
+    transition: all 0.2s ease;
+}
+
+.btn-dashboard-primary:hover {
+    color: #FFFFFF;
+    background: var(--brand-navy);
+    border-color: var(--brand-navy);
+}
+
+
+/* ==========================================
+   RESPONSIVE DASHBOARD
+========================================== */
+
+@media (max-width: 768px) {
+
+    #dashboardTabs {
+        justify-content: flex-start !important;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 4px;
+    }
+
+    #dashboardTabs .nav-link {
+        white-space: nowrap;
+        padding: 9px 14px;
+        font-size: 12px;
+    }
+
+    .dashboard-content {
+        padding: 12px !important;
+    }
+
+    .dashboard-table {
+        min-width: 700px;
+    }
+}
